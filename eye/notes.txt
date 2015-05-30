@@ -1,0 +1,11 @@
+bring up board: 
+test points, unused vias or through-hole boards to clamp on test points for oscilloscope for debugging
+
+smt nucleo can program another smt component via 6 pin programmer
+
+100 micro-amps, l0
+
+YUV422
+
+need to get STM32F427 chip from digikey
+http://www.digikey.com/product-search/en/programmers-development-systems/evaluation-boards-embedded-mcu-dsp/2621773?k=STM32F427
