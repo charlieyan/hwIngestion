@@ -1,6 +1,7 @@
 // buzzer pin
 int buzzerPin1 = 13;
-int delayInMicrosec = 50;
+int duration = 20;
+int pause = 50;
 
 void setup() {
   // to capture user input to toggle buzzer
@@ -23,9 +24,7 @@ void loop() {
     }
     else {
       Serial.print("Doing " + String(numClicks) + " clicks\n");
-      for (int i = 0; i < numClicks; i++) {
-        doClick(buzzerPin1, delayInMicrosec);
-      }
+      doClickN(buzzerPin1, duration, pause);
     }
   }
 }
@@ -43,8 +42,15 @@ int normalize(int userInput) {
   }
 }
 
-void doClick(int pinNumber, int delayInMicrosec) {
+void doClickN(int pinNumber, int duration, int n) {
+  for (int i = 0; i < numClicks; i++) {
+    doClick(buzzerPin1, duration);
+    delay(pause);
+  } 
+}
+
+void doClick(int pinNumber, int duration) {
   digitalWrite(pinNumber, HIGH);
-  delay(delayInMicrosec);
+  delay(duration);
   digitalWrite(pinNumber, LOW);
 }
