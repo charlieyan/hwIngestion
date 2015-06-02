@@ -1,4 +1,4 @@
-// buzzer pin
+// buzzer config
 int buzzerPin1 = 13;
 int duration = 20;
 int pause = 50;
